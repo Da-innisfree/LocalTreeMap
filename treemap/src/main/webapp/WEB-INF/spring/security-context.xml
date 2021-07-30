@@ -14,9 +14,8 @@
 			
 		<security:access-denied-handler error-page="/accessError"/>				
 		<security:form-login 
-			username-parameter="userEmail" 
-			password-parameter="userPW"
-			login-page="/treeMap/map" authentication-success-handler-ref="loginSuccess" authentication-failure-handler-ref="loginFailure"/>		
+			username-parameter="userEmail" password-parameter="userPW"
+		 authentication-success-handler-ref="loginSuccess" authentication-failure-handler-ref="loginFailure"/>		
 		 
 		<!-- 로그아웃 시에 세션,쿠키 삭제 -->
 		<security:logout 
@@ -33,5 +32,8 @@
 			</security:authentication-provider>
 			
 		</security:authentication-manager>
+		
+		
+
 
 </beans>

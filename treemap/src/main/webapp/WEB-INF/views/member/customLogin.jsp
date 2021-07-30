@@ -15,15 +15,15 @@
 		<div class="customLogin-body">
 			<h1 style="font-family:Open Sans; color:rgb(75,75,75)">Sign In</h1>
 			<h2>
-				<c:out value="${error}" />
+				<c:out value="${msg}" />
+				${msg}
 			</h2>
 			<h2>
 				<c:out value="${logout}" />
 			</h2>
-			<h2>
-				<c:out value="${msg}" />
-				<%=request.getAttribute("msg") %>
-			</h2>
+			<h3>
+				<c:out value="${loginFailMsg}" />
+			</h3>
 
 			<form method="post" action="/login" id="loginForm">
 				
@@ -38,8 +38,9 @@
 								class="loginInputs" type="password" name="userPW"
 								placeholder="비밀번호를 입력해주세요.">
 							<div>
-								<input type="checkbox" name="remember-me"> 자동로그인 저장
+								<input type="checkbox" name="remember-me">Remember Me
 							</div>
+							<a href="/member/findPw">비밀번호 찾기</a>
 						</div>
 						<div class="loginBox">
 							<button class="loginsubmit">확 인</button>
